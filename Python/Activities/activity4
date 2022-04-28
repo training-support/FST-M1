@@ -1,0 +1,38 @@
+user1 = input("Whats your User-1 Name : ")
+user2 = input("Whats your user-2 Name: ")
+
+user1_chioce=input(user1 + "Do you want to choose Rock,Paper or Scissors").lower()
+user2_choice=input(user2 + "Do you want to choose Rock,Paper or Scissors").lower()
+
+
+if user1_chioce == user2_choice:
+    print("it is a tie")
+elif user1_chioce == 'Rock':
+    if user2_choice == 'Scissors':
+        print("Rock Wins")
+    else:
+         print("Paper wins:")
+elif user1_chioce=='Paper':
+    if user2_choice=='Rock':
+        print("paper Wins")
+    else:
+         print("Scissors wins:")
+elif user1_chioce=='scissors':
+    if user2_choice=='paper':
+        print("Scissors Wins")
+    else:
+         print("Rock wins:")
+else:
+    print("Enter valid choise")
+
+repeat = input("Do you want to play another round? Yes/No: ").lower()
+    
+if(repeat == "y"):
+        pass
+
+elif(repeat == "n"):
+        raise SystemExit
+
+else:
+        print("You entered an invalid option. Exiting now.")
+        raise SystemExit

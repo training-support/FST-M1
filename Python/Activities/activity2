@@ -1,0 +1,12 @@
+num = int(input("Enter any number: "))
+mod=num%2
+if mod>0:
+    print("Its an odd Number")
+else:
+    print("Its an even number")   
+
+    num=int(input("Enter any number: "))
+if num%2==0:
+    print(f"The number {num} is even")
+else:
+    print(f"The number {num} is odd") 

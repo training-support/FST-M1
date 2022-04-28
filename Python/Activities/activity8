@@ -1,0 +1,9 @@
+#Given a list of numbers, return True if first and last number of a list is same Bonus points if you can make the user enter their own list.
+Numbers_list = list(input("Enter the list here").split(","))
+print("Given List is : ", Numbers_list)
+First_Number = Numbers_list[0]
+Second_Number = Numbers_list[-1]
+if(First_Number == Second_Number):
+    print(True)
+else:
+    print(False)    

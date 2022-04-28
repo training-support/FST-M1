@@ -1,0 +1,14 @@
+Number_List1 = list(input("Enter the numbers:".split(",")))
+Number_List2 = list(input("Enter the numbers:".split(",")))
+print("First List Numbers :",Number_List1)
+print("Second List Numbers :",Number_List2)
+thirdList=[]
+for num in Number_List1:
+    if (num % 2 != 0):
+        thirdList.append(num)
+###for num in Number_List2:
+    ###if(num % 2 == 0):
+       ### thirdList.append(num)###
+print("Result List is : ",thirdList)
+
+

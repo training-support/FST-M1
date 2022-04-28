@@ -1,0 +1,6 @@
+#Write a Python program to calculate the sum of all the elements in a list. 
+TotalNumber = list(input("Enter the number for addition ").split(","))
+Addition=0
+for Numbers in TotalNumber:
+    Addition += int(Numbers)
+print("Total of entered Numbers is : ", Addition)

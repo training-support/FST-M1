@@ -1,0 +1,5 @@
+name = ("Swati")
+age = int ("32")
+year = str((2022-age)+100)
+print(f"{name} will be 100 years old on year {year}")
+print(name + " Year " + year)
