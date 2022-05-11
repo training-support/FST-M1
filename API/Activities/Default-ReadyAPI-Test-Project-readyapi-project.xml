@@ -1,0 +1,2318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="Default ReadyAPI Test Project" soapui-version="6.0.0" resourceRoot="" id="61e04082-3ec6-4977-b3af-d6600f20ae9b" abortOnError="false" runType="SEQUENTIAL" activeEnvironment="Default environment" updated="3.30.0 2022-03-16T13:04:41Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>Sends requests to SOAP- and REST-based local virtual services on different ports.</con:description>
+  <con:settings>
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="GeneratableJUnitReport@Style">Multiple Pages</con:setting>
+    <con:setting id="GeneratableJUnitReport@Folder">C:\dev\htmlreports</con:setting>
+    <con:setting id="ReportTitle">SoapUI Report</con:setting>
+  </con:settings>
+  <con:interface name="ServiceSoapBinding" bindingName="{http://www.soapui.org/sample/}ServiceSoapBinding" soapVersion="1_1" definition="WSDL-WADL/sample-service.wsdl" xsi:type="con:WsdlInterface" wsaVersion="NONE" id="fae107bc-af20-46d6-977a-9ac1cff067be" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:endpoints>
+      <con:endpoint>http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint>
+      <con:endpoint>http://www.soapui.org/sample</con:endpoint>
+    </con:endpoints>
+    <con:operation action="http://www.soapui.org/sample/login" name="login" bindingOperationName="login" inputName="" isOneWay="false" receivesAttachments="false" sendsAttachments="false" type="Request-Response" id="728cfde6-25de-45ec-805a-c4905d874219">
+      <con:settings/>
+      <con:call name="login rq" outgoingWss="" incomingWss="" id="131c5358-ff43-484a-a0d1-950fa12645dc" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:login>
+ <username>Login</username>
+ <password>Login123</password>
+ </sam:login>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:username xsi:nil="true"/>
+          <con:password xsi:nil="true"/>
+          <con:domain xsi:nil="true"/>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation action="http://www.soapui.org/sample/logout" name="logout" bindingOperationName="logout" inputName="" isOneWay="false" receivesAttachments="false" sendsAttachments="false" type="Request-Response" id="b3d06ddc-956c-404f-afad-0d78931c21ac">
+      <con:settings/>
+      <con:call name="logout rq" outgoingWss="" incomingWss="" id="ec004984-0d0a-42fc-85e7-206c37c0c286" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:logout>
+ <sessionid>21974891784000294</sessionid>
+ </sam:logout>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:username xsi:nil="true"/>
+          <con:password xsi:nil="true"/>
+          <con:domain xsi:nil="true"/>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation action="http://www.soapui.org/sample/search" name="search" bindingOperationName="search" inputName="" isOneWay="false" receivesAttachments="false" sendsAttachments="false" type="Request-Response" id="70b787ca-12f1-4b3d-8a24-d82d09b6a964">
+      <con:settings/>
+      <con:call name="search rq" outgoingWss="" incomingWss="" id="db75c248-06e8-475e-b297-6edfa899ce81" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:search>
+ <sessionid>0154144954954053</sessionid>
+ <searchstring>?</searchstring>
+ </sam:search>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:username xsi:nil="true"/>
+          <con:password xsi:nil="true"/>
+          <con:domain xsi:nil="true"/>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation action="http://www.soapui.org/sample/buy" name="buy" bindingOperationName="buy" inputName="" isOneWay="false" receivesAttachments="false" sendsAttachments="false" type="Request-Response" id="82b4b422-ff21-4675-83a0-59db48eecbac">
+      <con:settings/>
+      <con:call name="buy rq" outgoingWss="" incomingWss="" id="6b88cf1a-afd1-40fc-ada7-01525bda01a4" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:buy>
+ <sessionid>?</sessionid>
+ <buystring>?</buystring>
+ </sam:buy>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:username xsi:nil="true"/>
+          <con:password xsi:nil="true"/>
+          <con:domain xsi:nil="true"/>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:definitionCache rootPart="WSDL-WADL/sample-service.wsdl">
+      <con:part>
+        <con:url>WSDL-WADL/sample-service.wsdl</con:url>
+        <con:content>
+          <wsdl:definitions name="sample" targetNamespace="http://www.soapui.org/sample/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.soapui.org/sample/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+            <wsdl:types>
+              <xsd:schema targetNamespace="http://www.soapui.org/sample/">
+                <xsd:element name="searchResponseContent">
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element name="item" type="tns:ItemType" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+                <xsd:complexType name="ItemType">
+                  <xsd:sequence>
+                    <xsd:element name="id" type="xsd:string"/>
+                    <xsd:element name="description" type="xsd:string"/>
+                    <xsd:element name="price" type="xsd:string"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+                <xsd:element name="buyResponseContent">
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element name="purchasestatus" type="tns:PurchaseStatusType" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+                <xsd:complexType name="PurchaseStatusType">
+                  <xsd:sequence>
+                    <xsd:element name="id" type="xsd:string"/>
+                    <xsd:element name="stockStatus" type="xsd:string"/>
+                    <xsd:element name="expectedDelivery" type="xsd:string"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:schema>
+            </wsdl:types>
+            <wsdl:message name="loginRequest">
+              <wsdl:part name="username" type="xsd:string"/>
+              <wsdl:part name="password" type="xsd:string"/>
+            </wsdl:message>
+            <wsdl:message name="loginResponse">
+              <wsdl:part name="sessionid" type="xsd:string"/>
+            </wsdl:message>
+            <wsdl:message name="logoutResponse">
+              <wsdl:part name="sessioninfo" type="xsd:string"/>
+            </wsdl:message>
+            <wsdl:message name="logoutRequest">
+              <wsdl:part name="sessionid" type="xsd:string"/>
+            </wsdl:message>
+            <wsdl:message name="searchRequest">
+              <wsdl:part name="sessionid" type="xsd:string"/>
+              <wsdl:part name="searchstring" type="xsd:string"/>
+            </wsdl:message>
+            <wsdl:message name="searchResponse">
+              <wsdl:part name="searchresult" element="tns:searchResponseContent"/>
+            </wsdl:message>
+            <wsdl:message name="buyRequest">
+              <wsdl:part name="sessionid" type="xsd:string"/>
+              <wsdl:part name="buystring" type="xsd:string"/>
+            </wsdl:message>
+            <wsdl:message name="buyResponse">
+              <wsdl:part name="buyresult" element="tns:buyResponseContent"/>
+            </wsdl:message>
+            <wsdl:message name="login_faultMsg">
+              <wsdl:part name="loginFault" type="xsd:string"/>
+            </wsdl:message>
+            <wsdl:message name="logout_faultMsg">
+              <wsdl:part name="logoutFault" type="xsd:string"/>
+            </wsdl:message>
+            <wsdl:message name="search_faultMsg">
+              <wsdl:part name="searchFault" type="xsd:string"/>
+            </wsdl:message>
+            <wsdl:message name="buy_faultMsg">
+              <wsdl:part name="buyFault" type="xsd:string"/>
+            </wsdl:message>
+            <wsdl:portType name="ISampleService">
+              <wsdl:operation name="login">
+                <wsdl:input message="tns:loginRequest"/>
+                <wsdl:output message="tns:loginResponse"/>
+                <wsdl:fault name="fault" message="tns:login_faultMsg"/>
+              </wsdl:operation>
+              <wsdl:operation name="logout">
+                <wsdl:input message="tns:logoutRequest"/>
+                <wsdl:output message="tns:logoutResponse"/>
+                <wsdl:fault name="fault" message="tns:logout_faultMsg"/>
+              </wsdl:operation>
+              <wsdl:operation name="search">
+                <wsdl:input message="tns:searchRequest"/>
+                <wsdl:output message="tns:searchResponse"/>
+                <wsdl:fault name="fault" message="tns:search_faultMsg"/>
+              </wsdl:operation>
+              <wsdl:operation name="buy">
+                <wsdl:input message="tns:buyRequest"/>
+                <wsdl:output message="tns:buyResponse"/>
+                <wsdl:fault name="fault" message="tns:buy_faultMsg"/>
+              </wsdl:operation>
+            </wsdl:portType>
+            <wsdl:binding name="ServiceSoapBinding" type="tns:ISampleService">
+              <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+              <wsdl:operation name="login">
+                <soap:operation soapAction="http://www.soapui.org/sample/login"/>
+                <wsdl:input>
+                  <soap:body use="literal" namespace="http://www.soapui.org/sample/"/>
+                </wsdl:input>
+                <wsdl:output>
+                  <soap:body use="literal" namespace="http://www.soapui.org/sample/"/>
+                </wsdl:output>
+                <wsdl:fault name="fault">
+                  <soap:fault use="literal" name="fault"/>
+                </wsdl:fault>
+              </wsdl:operation>
+              <wsdl:operation name="logout">
+                <soap:operation soapAction="http://www.soapui.org/sample/logout"/>
+                <wsdl:input>
+                  <soap:body use="literal" namespace="http://www.soapui.org/sample/"/>
+                </wsdl:input>
+                <wsdl:output>
+                  <soap:body use="literal" namespace="http://www.soapui.org/sample/"/>
+                </wsdl:output>
+                <wsdl:fault name="fault">
+                  <soap:fault use="literal" name="fault"/>
+                </wsdl:fault>
+              </wsdl:operation>
+              <wsdl:operation name="search">
+                <soap:operation soapAction="http://www.soapui.org/sample/search"/>
+                <wsdl:input>
+                  <soap:body use="literal" namespace="http://www.soapui.org/sample/"/>
+                </wsdl:input>
+                <wsdl:output>
+                  <soap:body use="literal" namespace="http://www.soapui.org/sample/"/>
+                </wsdl:output>
+                <wsdl:fault name="fault">
+                  <soap:fault use="literal" name="fault"/>
+                </wsdl:fault>
+              </wsdl:operation>
+              <wsdl:operation name="buy">
+                <soap:operation soapAction="http://www.soapui.org/sample/buy"/>
+                <wsdl:input>
+                  <soap:body use="literal" namespace="http://www.soapui.org/sample/"/>
+                </wsdl:input>
+                <wsdl:output>
+                  <soap:body use="literal" namespace="http://www.soapui.org/sample/"/>
+                </wsdl:output>
+                <wsdl:fault name="fault">
+                  <soap:fault use="literal" name="fault"/>
+                </wsdl:fault>
+              </wsdl:operation>
+            </wsdl:binding>
+            <wsdl:service name="SampleService">
+              <wsdl:port name="SamplePort" binding="tns:ServiceSoapBinding">
+                <soap:address location="http://www.soapui.org/sample"/>
+              </wsdl:port>
+            </wsdl:service>
+          </wsdl:definitions>
+        </con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+    </con:definitionCache>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="8b4877da-9c17-4d74-baf9-2881747b6a79" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8084" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:8084</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Login" path="/login" id="ff930a3e-8923-4842-9db0-3e7356e664f9">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>username</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+          <con:path xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>password</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+          <con:path xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Login" id="9ea60d1b-c865-4e88-a64c-9277fe9f49c8" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element xmlns:log="http://localhost/login">log:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:log="http://localhost/login">log:Response</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="f0635073-e001-43aa-9998-b56c4836b1b1" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8084</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/login</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="username" value="Login"/>
+            <con:entry key="password" value="Login123"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>username</con:entry>
+            <con:entry>password</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="logout" path="/logout" id="52f3bdd1-87fc-4ac1-b036-a674cf307ba7">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>sessionid</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method 1" id="c95c1b72-7b5d-4f1d-a021-597dc06865fa" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:log="http://localhost/logout">log:Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:log="http://localhost/logout">log:Fault</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="f1c29317-1395-4ebb-a1bb-16b22c832cdf" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8084</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/logout</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <entry key="sessionid" value="1234" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>sessionid</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="search" path="/search" id="973a761d-2b4b-4b5b-9736-1d7d78ec9af3">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>sessionid</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>searchstring</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method 1" id="a1ff4b74-5e2b-4b4e-a242-bdbd81d987a2" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:sear="http://localhost/search">sear:Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="62e6693c-4a8b-4c46-8fdc-fbe4a2652fab" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8084</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <entry key="searchstring" value="Item 1" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="buy" path="/buy" id="d2e78192-32e5-44ea-b917-4dccd7c6470b">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>sessionid</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>buystring</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method 1" id="776de6e3-98ad-49a2-9676-be7bfeff03f0" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Request 1" id="15159f81-8f38-48e1-8e4d-5ca7e66b117c" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8084</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <entry key="buystring" value="Item 1" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite name="TestSuite" id="574cf3f6-8e98-48d7-86c8-27a4e2b63ab4">
+    <con:description>This is a sample TestSuite.
+
+            It contains a number of TestCases Illustrating a number of principles with ReadyAPI Test.
+
+            Try each test and read the descriptions.</con:description>
+    <con:settings>
+      <con:setting id="ExportJUnitReportAction@report-directory">C:\dev\testreport</con:setting>
+      <con:setting id="ExportJUnitReportAction@clear-existing">true</con:setting>
+      <con:setting id="ExportJUnitReportAction@format">Frames</con:setting>
+      <con:setting id="CreateReportAction@report-directory">C:\dev\testreport</con:setting>
+      <con:setting id="CreateReportAction@format">Multiple Pages</con:setting>
+      <con:setting id="IncludeOverview">true</con:setting>
+      <con:setting id="IncludeResults">true</con:setting>
+      <con:setting id="FlowLayout">false</con:setting>
+      <con:setting id="ErrorDetails">true</con:setting>
+      <con:setting id="IncludeCoverage">true</con:setting>
+      <con:setting id="ReportTitle">Default Title</con:setting>
+    </con:settings>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="ddc9a1ab-2055-423e-af1f-365f8c49dbeb" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="REST TestCase" searchProperties="true">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="Login test step" id="a25567e2-cf41-495c-aaad-04a9513059a6">
+        <con:settings/>
+        <con:config service="http://localhost:8084" resourcePath="/login" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Login test step" id="f0635073-e001-43aa-9998-b56c4836b1b1" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8084</con:endpoint>
+            <con:request>{
+                            "domain" : "sample",
+                            "pre-emptive auth" : true
+                            }</con:request>
+            <con:originalUri>http://localhost/login</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e191c7c9-ccc6-4fb8-bf0d-a6f2af4ed5f9" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="780cec9a-e3bc-4128-84b1-9f7baf799275" name="Check for existence of [sessionid]">
+              <con:configuration>
+                <path>$['sessionid']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="password" value="Login123"/>
+              <con:entry key="username" value="Login"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>username</con:entry>
+              <con:entry>password</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Search test step" id="2d4d2cc1-e271-41b4-9a44-281e52af8035">
+        <con:settings/>
+        <con:config service="http://localhost:8084" resourcePath="/search" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Search test step" id="62e6693c-4a8b-4c46-8fdc-fbe4a2652fab" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8084</con:endpoint>
+            <con:request>{
+                            "timestamp" : "${Login test step#Response#$['timestamp']}"
+                            }</con:request>
+            <con:originalUri>http://localhost/search</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="15d75e75-93fa-43bc-99e8-ab2f9e786425" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="searchstring" value="Item 1"/>
+              <con:entry key="sessionid" value="${Login test step#Response#$.sessionid}"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Logout test step" id="ed7ee62e-feff-43d9-8102-b00a4f2a082b">
+        <con:settings/>
+        <con:config service="http://localhost:8084" resourcePath="/logout" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Logout test step" id="f1c29317-1395-4ebb-a1bb-16b22c832cdf" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8084</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/logout</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="6ac6f8bb-39cd-4140-bc62-f469de944750" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="sessionid" value="${Login test step#Response#$.sessionid}" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>sessionid</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:setupScript>virtRunner.run("ServiceSoapBinding MockService")
+                virtRunner.run("RESTMockService")</con:setupScript>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>2d4d2cc1-e271-41b4-9a44-281e52af8035</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>d16b9f26-fcf7-4571-aed4-3d313155b85d</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>59c09930-9a5b-4753-a0c4-d45cd8b11dc5</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="bfb43783-1d54-4599-9c4a-e61b64b747da" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Data Driven REST TestCase" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="datasource" name="DataSource" id="bf98152d-6965-42b9-9561-2b50d8410319">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Data Generator">
+            <con:configuration>
+              <generatedDataCount>5</generatedDataCount>
+              <generatorsTotalNumber>2</generatorsTotalNumber>
+              <lastSelectedProperty>0</lastSelectedProperty>
+              <GeneratorType0>NAME</GeneratorType0>
+              <PropertyName0>username</PropertyName0>
+              <repetitionCountusername>0</repetitionCountusername>
+              <repeatValuesusername>false</repeatValuesusername>
+              <NameTypeName0>FirstName</NameTypeName0>
+              <NameGenderName0>Any</NameGenderName0>
+              <GeneratorType1>STR</GeneratorType1>
+              <PropertyName1>password</PropertyName1>
+              <repetitionCountpassword>0</repetitionCountpassword>
+              <repeatValuespassword>false</repeatValuespassword>
+              <PasswordDataGeneratorUseSpacespassword>false</PasswordDataGeneratorUseSpacespassword>
+              <PasswordDataGeneratorUsePunctuationMarkspassword>false</PasswordDataGeneratorUsePunctuationMarkspassword>
+              <PasswordDataGeneratorUseLetterspassword>true</PasswordDataGeneratorUseLetterspassword>
+              <PasswordDataGeneratorUseDigitspassword>true</PasswordDataGeneratorUseDigitspassword>
+              <PasswordDataGeneratorMaxCharacterCountpassword>10</PasswordDataGeneratorMaxCharacterCountpassword>
+              <PasswordDataGeneratorMinCharacterCountpassword>5</PasswordDataGeneratorMinCharacterCountpassword>
+              <escapeSpaceSequence/>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>username</con:property>
+          <con:property>password</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Login test step" id="e9fd58a8-9f8e-4165-aefe-453196b8a0e3">
+        <con:settings/>
+        <con:config service="http://localhost:8084" resourcePath="/login" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Login test step" id="f0635073-e001-43aa-9998-b56c4836b1b1" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8084</con:endpoint>
+            <con:request>{
+                            "domain" : "sample",
+                            "pre-emptive auth" : true
+                            }</con:request>
+            <con:originalUri>http://localhost/login</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e191c7c9-ccc6-4fb8-bf0d-a6f2af4ed5f9" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="1ced112a-3fc8-462b-84de-bde96aeb36d1" name="Check for existence of [sessionid]">
+              <con:configuration>
+                <path>$['sessionid']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="password" value="${DataSource#password}"/>
+              <con:entry key="username" value="${DataSource#username}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>username</con:entry>
+              <con:entry>password</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Search test step" id="f0db7ac5-5669-4a5d-9082-049f811dd3ec">
+        <con:settings/>
+        <con:config service="http://localhost:8084" resourcePath="/search" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Search test step" id="62e6693c-4a8b-4c46-8fdc-fbe4a2652fab" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8084</con:endpoint>
+            <con:request>{
+                            "timestamp" : "${Login test step#Response#$['timestamp']}"
+                            }</con:request>
+            <con:originalUri>http://localhost/search</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="15d75e75-93fa-43bc-99e8-ab2f9e786425" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="61ce3d60-b446-4b1f-96ef-2b7303047c7c" name="Check for existence of [id]">
+              <con:configuration>
+                <path>$['result']['item']['id']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="searchstring" value="Item 1"/>
+              <con:entry key="sessionid" value="${Login test step#Response#$.sessionid}"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Buy test step" id="6c603621-5477-48c7-8a6e-c6b6d06a600f">
+        <con:settings/>
+        <con:config service="http://localhost:8084" resourcePath="/search" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Buy test step" id="62e6693c-4a8b-4c46-8fdc-fbe4a2652fab" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8084</con:endpoint>
+            <con:request>{
+                            "timestamp" : "${Login test step#Response#$['timestamp']}"
+                            }</con:request>
+            <con:originalUri>http://localhost/search</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="59ab57cc-e61c-4b37-96ea-1bfa7bd7c3bd" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="fa3a5c3b-a96b-455c-9ef1-7798f5c61856" name="Check for existence of [id]">
+              <con:configuration>
+                <path>$['result']['item']['id']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="searchstring" value="Item 1"/>
+              <con:entry key="sessionid" value="${Login test step#Response#$.sessionid}"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Logout test step" id="6b7070cb-fce3-4c63-afaf-113330193cf9">
+        <con:settings/>
+        <con:config service="http://localhost:8084" resourcePath="/logout" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Logout test step" id="f1c29317-1395-4ebb-a1bb-16b22c832cdf" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8084</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/logout</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="6ac6f8bb-39cd-4140-bc62-f469de944750" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="sessionid" value="${Login test step#Response#$.sessionid}" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>sessionid</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="2b59c8ea-4324-4336-9a4d-80546ce0fa7f">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>DataSource</dataSourceStep>
+          <targetStep>Login test step</targetStep>
+          <discardResults>false</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>6a94eacc-b355-4b57-814a-f6e91ba758ce</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>2d4d2cc1-e271-41b4-9a44-281e52af8035</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>bf98152d-6965-42b9-9561-2b50d8410319</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>2b59c8ea-4324-4336-9a4d-80546ce0fa7f</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="SOAP TestCase" searchProperties="true" maxResults="0" id="01518d1e-ecab-4cc7-9ed2-2f15c3a806a1" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+      <con:description>TestCase - Simple Search TestCase
+
+
+                The test extends the previous TastCases by doing a simple search between login and logout.
+
+                We are using a Property Transfer Step to move password and user name from a Properties Step to the
+                Request and a second Property Transfer Step to move the sessionID we got in the login response to the
+                logout request..</con:description>
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="request" name="Login - SOAP test step" id="c82d2569-4880-448b-a646-0d1a9c386c10">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>ServiceSoapBinding</con:interface>
+          <con:operation>login</con:operation>
+          <con:request name="Login - SOAP test step" outgoingWss="" incomingWss="" id="b31e969b-ab80-43ea-93d4-f77a6ecd07c2" defaultOutgoingWss="" defaultIncomingWss="">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:login>
+ <username>Login</username>
+ <password>Login123</password>
+ </sam:login>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="59890894-3a1f-4cc3-8b8c-e4c1189f460a"/>
+            <con:assertion type="Schema Compliance" id="cf765eec-4eef-4f78-8731-885355c52a51">
+              <con:configuration/>
+            </con:assertion>
+            <con:assertion type="SOAP Fault Assertion" id="657fc4ed-753e-4100-a539-cac9b9e9b25d"/>
+            <con:credentials>
+              <con:username xsi:nil="true"/>
+              <con:password xsi:nil="true"/>
+              <con:domain xsi:nil="true"/>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" name="Search - SOAP test step" id="ca6ef22e-d46d-4d9f-bfe7-20290ad01f79">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>ServiceSoapBinding</con:interface>
+          <con:operation>search</con:operation>
+          <con:request name="Search - SOAP test step" outgoingWss="" incomingWss="" id="1a624c91-9a29-4f2d-bb2d-31bdf394b3d3" defaultOutgoingWss="" defaultIncomingWss="">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:search>
+ <sessionid>${Login - SOAP test step#Response#declare namespace sam='http://www.soapui.org/sample/'; //sam:loginResponse[1]/sessionid[1]}</sessionid>
+ <searchstring>Item 1</searchstring>
+ </sam:search>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="df6bc195-3084-4cec-9e7f-7029bf6c5a4c"/>
+            <con:assertion type="Schema Compliance" id="b4bcabd6-25d2-48c5-9e72-215fd21d140d">
+              <con:configuration/>
+            </con:assertion>
+            <con:assertion type="SOAP Fault Assertion" id="d825c886-82d9-464c-83d4-08cc2ccce063"/>
+            <con:credentials>
+              <con:username xsi:nil="true"/>
+              <con:password xsi:nil="true"/>
+              <con:domain xsi:nil="true"/>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="d44d01e1-ca4a-4207-b1a2-6fa4f2e3d7df" name="Buy - SOAP test step">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>ServiceSoapBinding</con:interface>
+          <con:operation>buy</con:operation>
+          <con:request name="Buy - SOAP test step" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="0a36356c-6f4d-4b0e-9664-378565ae1a97" defaultOutgoingWss="" defaultIncomingWss="">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:buy>
+ <sessionid>${Login - SOAP test step#Response#declare namespace sam='http://www.soapui.org/sample/'; //sam:loginResponse[1]/sessionid[1]}</sessionid>
+ <buystring>Item 1</buystring>
+ </sam:buy>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="cfb873e0-a2b3-4f52-90e8-6db339a442cf" name="SOAP Response"/>
+            <con:credentials>
+              <con:username xsi:nil="true"/>
+              <con:password xsi:nil="true"/>
+              <con:domain xsi:nil="true"/>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" name="Logout - SOAP test step" id="182d3cec-db10-44e4-be89-3c558d09520c">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>ServiceSoapBinding</con:interface>
+          <con:operation>logout</con:operation>
+          <con:request name="Logout - SOAP test step" outgoingWss="" incomingWss="" id="f2ab56e6-416a-4d0a-bcfb-6a980b1e6968" defaultOutgoingWss="" defaultIncomingWss="">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:logout>
+ <sessionid>${Login - SOAP test step#Response#declare namespace sam='http://www.soapui.org/sample/'; //sam:loginResponse[1]/sessionid[1]}</sessionid>
+ </sam:logout>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="8c6335f0-17a6-4192-bab0-2aa866e33879"/>
+            <con:assertion type="Schema Compliance" id="cc1b2d9f-1290-4098-9128-7496957be8d4">
+              <con:configuration/>
+            </con:assertion>
+            <con:credentials>
+              <con:username xsi:nil="true"/>
+              <con:password xsi:nil="true"/>
+              <con:domain xsi:nil="true"/>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>d44d01e1-ca4a-4207-b1a2-6fa4f2e3d7df</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:setupScript/>
+    <con:tearDownScript/>
+    <con:reportScript/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:mockService port="8083" path="/mockServiceSoapBinding" name="ServiceSoapBinding MockService" host="localhost" id="1b296f35-967d-4aa9-bfd0-91b8b0544495">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting>
+    </con:settings>
+    <con:constraints>
+      <con:congestion>0</con:congestion>
+      <con:inputBandwidth>-1</con:inputBandwidth>
+      <con:outputBandwidth>-1</con:outputBandwidth>
+      <con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity>
+      <con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity>
+      <con:minApplicationDelay>0</con:minApplicationDelay>
+      <con:virtError>
+        <con:code>200</con:code>
+        <con:start>0</con:start>
+        <con:endless>true</con:endless>
+      </con:virtError>
+    </con:constraints>
+    <con:dataSources/>
+    <con:headerValidator type="NONE"/>
+    <con:mockOperation name="login" interface="ServiceSoapBinding" operation="login" id="5352c0ea-b158-4d68-8cd0-258d46eef13f">
+      <con:settings/>
+      <con:dispatchPath>def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+                def holder = groovyUtils.getXmlHolder( mockRequest.requestContent )
+
+                // parse username and password from login request
+                def username = holder.getNodeValue( "//username" )
+                def password = holder.getNodeValue( "//password" )
+                def sum = username + password
+
+                // generate a session ID sequence
+                def sessionid = String.valueOf( Math.random() ).substring( 2 )
+
+                // set session in sum property to be references in response
+                context.setProperty( sum, sessionid )
+                context.setProperty( sessionid, sum )
+
+                requestContext.sessionid = sessionid
+
+                // set the response
+                return "Ok Response"</con:dispatchPath>
+      <con:dispatchStyle>SCRIPT</con:dispatchStyle>
+      <con:defaultResponse>Ok Response</con:defaultResponse>
+      <con:dispatchXPath/>
+      <con:parameterDispatcherRuleContainer/>
+      <con:routeScript/>
+      <con:response name="Ok Response" encoding="UTF-8" httpResponseStatus="200" id="3eea3d02-3870-4fda-8fc5-687108d91f79" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:loginResponse>
+ <sessionid>${sessionid}</sessionid>
+ </sam:loginResponse>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Invalid Login Fault" encoding="UTF-8" httpResponseStatus="200" id="40b2ad13-75c3-49bb-8173-b4b7bc977405" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Body>
+ <soapenv:Fault>
+ <faultcode>Client</faultcode>
+ <faultstring>Invalid Login</faultstring>
+ <detail>
+ <sam:loginFault>The login credentials are invalid</sam:loginFault>
+ </detail>
+ </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Already Logged In Fault" encoding="UTF-8" httpResponseStatus="200" id="8ede26b1-719b-47d3-9150-cd5d4707029e" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Body>
+ <soapenv:Fault>
+ <faultcode>Client</faultcode>
+ <faultstring>Already Login</faultstring>
+ <detail>
+ <sam:loginFault>The specified credentials are already logged in</sam:loginFault>
+ </detail>
+ </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:dispatchConfig/>
+    </con:mockOperation>
+    <con:mockOperation name="logout" interface="ServiceSoapBinding" operation="logout" id="dbe1e056-961f-4237-873e-9e7cbc83703c">
+      <con:settings/>
+      <con:dispatchPath>def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+                def holder = groovyUtils.getXmlHolder( mockRequest.requestContent )
+
+                def sessionid = holder.getNodeValue( "//sessionid" )
+
+                // check
+                if( !context.hasProperty( sessionid ))
+                return "Invalid Session Id Fault"
+
+                // logout
+                context.removeProperty( context.getProperty( sessionid ))
+                context.removeProperty( sessionid )
+                requestContext.sessioninfo = "OK"
+
+                return "Ok Response"</con:dispatchPath>
+      <con:dispatchStyle>SCRIPT</con:dispatchStyle>
+      <con:defaultResponse>Ok Response</con:defaultResponse>
+      <con:dispatchXPath/>
+      <con:parameterDispatcherRuleContainer/>
+      <con:routeScript/>
+      <con:response name="Ok Response" encoding="UTF-8" httpResponseStatus="200" id="1f047aec-e49c-4ed6-9505-f1dc21a20091" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:logoutResponse>
+ <sessioninfo>${sessioninfo}</sessioninfo>
+ </sam:logoutResponse>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Invalid Session Id Fault" encoding="UTF-8" httpResponseStatus="200" id="34a75420-ab1c-4e4c-999d-ac7f1e65f18b" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+ <soapenv:Body>
+ <soapenv:Fault>
+ <faultcode>Client</faultcode>
+ <faultstring>Invalid Session Id</faultstring>
+ </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:dispatchConfig/>
+    </con:mockOperation>
+    <con:mockOperation name="search" interface="ServiceSoapBinding" operation="search" id="760722f9-0d4a-44b6-b297-e16095df6ed6">
+      <con:settings/>
+      <con:dispatchPath>def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+                def holder = groovyUtils.getXmlHolder( mockRequest.requestContent )
+
+                def sessionid = holder.getNodeValue( "//sessionid" )
+
+                // check
+                if( !context.hasProperty( sessionid ))
+                return "Invalid Session Id Fault"
+
+                def searchstring = holder.getNodeValue( "//searchstring" )
+
+                if (searchstring == "all")
+                return "WildCard Response"
+                else if (searchstring == "Item 1")
+                return "Item 1 Response"
+                else if (searchstring == "Item 2")
+                return "Item 2 Response"
+                else if (searchstring == "Item 3")
+                return "Item 3 Response"
+                else if (searchstring == "Item 4")
+                return "Item 3 Response"
+                else if (searchstring == "Item 5")
+                return "Item 5 Response"
+                else
+                return "Unknown Response"
+
+
+                return "Search Response"</con:dispatchPath>
+      <con:dispatchStyle>SCRIPT</con:dispatchStyle>
+      <con:defaultResponse>Search Response</con:defaultResponse>
+      <con:dispatchXPath/>
+      <con:parameterDispatcherRuleContainer/>
+      <con:routeScript/>
+      <con:response name="Search Response" encoding="UTF-8" httpResponseStatus="200" id="2abbdf66-62fb-43ad-8d0b-791da428d66f" dataSource="">
+        <con:settings/>
+        <con:script>context.item4description = Math.random() > 0.9 ? "garbage" : "Item nr 4"</con:script>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:searchResponse>
+ <sam:searchResponseContent>
+ <item>
+ <id>1</id>
+ <description>One handy protocol droid.</description>
+ <price>1</price>
+ </item>
+ <item>
+ <id>2</id>
+ <description>Item nr 2</description>
+ <price>2</price>
+ </item>
+ <item>
+ <id>3</id>
+ <description>Item nr 3</description>
+ <price>3</price>
+ </item>
+ <item>
+ <id>4</id>
+ <description>${item4description}</description>
+ <price>4</price>
+ </item>
+ <item>
+ <id>5</id>
+ <description>Item nr 5</description>
+ <price>5</price>
+ </item>
+ </sam:searchResponseContent>
+ </sam:searchResponse>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Invalid Session Id Fault" encoding="UTF-8" httpResponseStatus="200" id="cfbd4f22-c986-47d4-8623-ad6040bc7d04" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+ <soapenv:Body>
+ <soapenv:Fault>
+ <faultcode>Client</faultcode>
+ <faultstring>Invalid Session Id</faultstring>
+ </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Item 1 Response" encoding="UTF-8" httpResponseStatus="200" id="5e5d44ed-b0f9-4780-b183-51925b181fc7" dataSource="">
+        <con:settings/>
+        <con:script>context.item4description = Math.random() > 0.9 ? "garbage" : "Item nr 4"</con:script>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ 	 <sam:searchResponse>
+ <sam:searchResponseContent>
+ <item>
+ <id>Item 1</id>
+ <description>One handy protocol droid. This droid is fluent 
+		in over six million forms of communication and has a lovely golden color. 
+		Built by an enthusiast. Mindwiped only once. Can be carried on your back.</description>
+ <price>1</price>
+ </item>
+ </sam:searchResponseContent>
+		</sam:searchResponse>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Item 2 Response" encoding="UTF-8" httpResponseStatus="200" id="789efe1f-a21f-4f30-b70b-be8cbfe7f6ca" dataSource="">
+        <con:settings/>
+        <con:script>context.item4description = Math.random() > 0.9 ? "garbage" : "Item nr 4"</con:script>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+	 <sam:searchResponse>
+ <sam:searchResponseContent>
+ <item>
+ <id>Item 2</id>
+ <description>Box of chocolate with several popular items. Covered in Glucose.
+		Recommended safety distance when eating Spring Surprise, 10 feet.</description>
+ <price>1.99</price>
+ </item>
+ </sam:searchResponseContent>
+	 </sam:searchResponse>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Item 3 Response" encoding="UTF-8" httpResponseStatus="200" id="b5af5103-0b06-4e0b-a57c-daf4a95ebe13" dataSource="">
+        <con:settings/>
+        <con:script>context.item4description = Math.random() > 0.9 ? "garbage" : "Item nr 4"</con:script>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+	 <sam:searchResponse>
+ <sam:searchResponseContent>
+ <item>
+ <id>Item 3</id>
+ <description>One towel. Massively useful thing. 
+Impress the strags with this amazing cloth!</description>
+ <price>2.99</price>
+ </item>
+ </sam:searchResponseContent>
+	 </sam:searchResponse>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Item 4 Response" encoding="UTF-8" httpResponseStatus="200" id="5aff3039-fee5-44ee-84a4-8b3854809857" dataSource="">
+        <con:settings/>
+        <con:script>context.item4description = Math.random() > 0.9 ? "garbage" : "Item nr 4"</con:script>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+	 <sam:searchResponse>
+ <sam:searchResponseContent>
+ <item>
+ <id>item 4</id>
+ <description>Ono-Sendai 7. The newest cowboy tech from Hosaka. 
+		Break the ICE with this conversation piece.</description>
+ <price>4.99</price>
+ </item>
+ </sam:searchResponseContent>
+ </sam:searchResponse>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Item 5 Response" encoding="UTF-8" httpResponseStatus="200" id="17cc70fd-0401-4b3d-b21d-3f8743f58755" dataSource="">
+        <con:settings/>
+        <con:script>context.item4description = Math.random() > 0.9 ? "garbage" : "Item nr 4"</con:script>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+	 <sam:searchResponse>
+ <sam:searchResponseContent>
+ <item>
+ <id>item 5</id>
+ <description>soapui Pro 1.7.5. Necessary when testing Web Services.</description>
+ <price>349</price>
+ </item>
+ <sam:searchResponseContent>
+ </sam:searchResponse>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Search Fault Response" encoding="UTF-8" httpResponseStatus="200" id="5b99a44c-c605-4612-9d3a-6c195005b93b" dataSource="">
+        <con:settings/>
+        <con:script>context.item4description = Math.random() > 0.9 ? "garbage" : "Item nr 4"</con:script>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <soapenv:Fault>
+ <faultcode>Server</faultcode>
+ <faultstring>No Result</faultstring>
+ <detail>
+ <sam:loginFault>The search returned no items</sam:loginFault>
+ </detail>
+ </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Unknown Response" encoding="UTF-8" httpResponseStatus="200" id="ecbe7e66-4595-48f4-8dd5-4190aae07391" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+ <soapenv:Body>
+ <soapenv:Fault>
+ <faultcode>Client</faultcode>
+ <faultstring>Unknown Search String</faultstring>
+ </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="WildCard Response" encoding="UTF-8" httpResponseStatus="200" id="61f95679-1995-4dfc-a1b3-7991dc89060f" dataSource="">
+        <con:settings/>
+        <con:script>context.item4description = Math.random() > 0.9 ? "garbage" : "Item nr 4"</con:script>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:searchResponse>
+ <sam:searchResponseContent>
+ <item>
+ <id>Item 1</id>
+ <description>One handy protocol droid. This droid is fluent 
+		in over six million forms of communication and has a lovely golden color. 
+		Built by an enthusiast. Mindwiped only once. Can be carried on your back.</description>
+ <price>1</price>
+ </item>
+ <item>
+ <id>Item 2</id>
+ <description>Box of chocolate with several popular items. Covered in Glucose.
+		Recommended safety distance when eating Spring Surprise, 10 feet.</description>
+ <price>1.99</price>
+ </item>
+ <item>
+ <id>Item 3</id>
+ <description>One towel. Massively useful thing. 
+Impress the strags with this amazing cloth!</description>
+ <price>2.99</price>
+ </item>
+ <item>
+ <id>Item 4</id>
+ <description>Ono-Sendai 7. The newest cowboy tech from Hosaka. 
+		Break the ICE with this conversation piece.</description>
+ <price>4.99</price>
+ </item>
+ <item>
+ <id>Item 5</id>
+ <description>soapui Pro 1.7.5. Necessary when testing Web Services.</description>
+ <price>349</price>
+ </item>
+ </sam:searchResponseContent>
+ </sam:searchResponse>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:dispatchConfig/>
+    </con:mockOperation>
+    <con:mockOperation name="buy" interface="ServiceSoapBinding" operation="buy" id="423d4fe3-9962-47a1-9956-c14e1906e224">
+      <con:settings/>
+      <con:dispatchPath>def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+                def holder = groovyUtils.getXmlHolder( mockRequest.requestContent )
+
+                def sessionid = holder.getNodeValue( "//sessionid" )
+
+                // check
+                if( !context.hasProperty( sessionid ))
+                return "Invalid Session Id Fault"
+
+                def buystring = holder.getNodeValue( "//buystring" )
+
+                if (buystring == "all")
+                return "WildCard Response"
+                else if (buystring == "Item 1")
+                return "Item 1 Response"
+                else if (buystring == "Item 2")
+                return "Item 2 Response"
+                else if (buystring == "Item 3")
+                return "Item 3 Response"
+                else if (buystring == "Item 4")
+                return "Item 3 Response"
+                else if (buystring == "Item 5")
+                return "Item 5 Response"
+                else
+                return "Unknown Response"
+
+
+                return "Search Response"</con:dispatchPath>
+      <con:dispatchStyle>SCRIPT</con:dispatchStyle>
+      <con:defaultResponse>Buy Response</con:defaultResponse>
+      <con:dispatchXPath/>
+      <con:parameterDispatcherRuleContainer/>
+      <con:routeScript/>
+      <con:response name="Buy Response" encoding="UTF-8" httpResponseStatus="200" id="d1f684bf-5f77-406c-bcd0-abc154b78c46" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:buyResponse>
+ <sam:buyResponseContent>
+ <purchasestatus>
+ <id>?</id>
+ <stockStatus>?</stockStatus>
+ <expectedDelivery>?</expectedDelivery>
+ </purchasestatus>
+ </sam:buyResponseContent>
+ </sam:buyResponse>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Item 1 Response" encoding="UTF-8" httpResponseStatus="200" id="3a7212f0-53a4-4e8d-b5c8-54d34a104cb4" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:buyResponse>
+ <sam:buyResponseContent>
+ <purchasestatus>
+ <id>Item 1</id>
+ <stockStatus>1 unit</stockStatus>
+ <expectedDelivery>2000 years from now</expectedDelivery>
+ </purchasestatus>
+ </sam:buyResponseContent>
+ </sam:buyResponse>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Item 2 Response" encoding="UTF-8" httpResponseStatus="200" id="fd5b8df2-4d23-402e-9f37-e8c61aa98c81" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:buyResponse>
+ <sam:buyResponseContent>
+ <purchasestatus>
+ <id>Item 2</id>
+ <stockStatus>10 000 boxes</stockStatus>
+ <expectedDelivery>1 week</expectedDelivery>
+ </purchasestatus>
+ </sam:buyResponseContent>
+ </sam:buyResponse>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Item 3 Response" encoding="UTF-8" httpResponseStatus="200" id="6fa464ef-42b7-4dde-b3cf-1d555e7c3cec" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:buyResponse>
+ <sam:buyResponseContent>
+ <purchasestatus>
+ <id>Item 3</id>
+ <stockStatus>4 towels</stockStatus>
+ <expectedDelivery>Any day now...</expectedDelivery>
+ </purchasestatus>
+ </sam:buyResponseContent>
+ </sam:buyResponse>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Item 4 Response" encoding="UTF-8" httpResponseStatus="200" id="b598ded2-75cc-438a-b558-103bcbbed0ae" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:buyResponse>
+ <sam:buyResponseContent>
+ <purchasestatus>
+ <id>Item 4</id>
+ <stockStatus>1 unit</stockStatus>
+ <expectedDelivery>In the near future.</expectedDelivery>
+ </purchasestatus>
+ </sam:buyResponseContent>
+ </sam:buyResponse>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Item 5 Response" encoding="UTF-8" httpResponseStatus="200" id="01f5c66f-7253-471f-a8d3-b2beb0869266" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:buyResponse>
+ <sam:buyResponseContent>
+ <purchasestatus>
+ <id>Item 5</id>
+ <stockStatus>1 license</stockStatus>
+ <expectedDelivery>You should already have it.</expectedDelivery>
+ </purchasestatus>
+ </sam:buyResponseContent>
+ </sam:buyResponse>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Invalid Session Id Fault" encoding="UTF-8" httpResponseStatus="200" id="7403376f-6d10-429c-8604-a1ef45fab958" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+ <soapenv:Body>
+ <soapenv:Fault>
+ <faultcode>Client</faultcode>
+ <faultstring>Invalid Session Id</faultstring>
+ </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="Unknown Response" encoding="UTF-8" httpResponseStatus="200" id="3790f55a-9e06-4edf-a55e-ccb7ddc3abf1" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:buyResponse>
+ <sam:buyResponseContent>
+ <purchasestatus>
+ <id>?</id>
+ <stockStatus>?</stockStatus>
+ <expectedDelivery>?</expectedDelivery>
+ </purchasestatus>
+ </sam:buyResponseContent>
+ </sam:buyResponse>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response name="WildCard Response" encoding="UTF-8" httpResponseStatus="200" id="d2a6bdf2-7a04-490f-aa74-33306a96cd66" dataSource="">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+ <soapenv:Header/>
+ <soapenv:Body>
+ <sam:buyResponse>
+ <sam:buyResponseContent>
+ <purchasestatus>
+ <id>Item 1</id>
+ <stockStatus>1 unit</stockStatus>
+ <expectedDelivery>2000 years from now</expectedDelivery>
+ </purchasestatus>
+ <purchasestatus>
+ <id>Item 2</id>
+ <stockStatus>10 000 boxes</stockStatus>
+ <expectedDelivery>1 week</expectedDelivery>
+ </purchasestatus>
+	 <purchasestatus>
+ <id>Item 3</id>
+ <stockStatus>4 towels</stockStatus>
+ <expectedDelivery>Any day now...</expectedDelivery>
+ </purchasestatus>
+ <purchasestatus>
+ <id>Item 4</id>
+ <stockStatus>1 unit</stockStatus>
+ <expectedDelivery>In the near future.</expectedDelivery>
+ </purchasestatus>
+ <purchasestatus>
+ <id>Item 5</id>
+ <stockStatus>1 license</stockStatus>
+ <expectedDelivery>You should already have it.</expectedDelivery>
+ </purchasestatus>
+ </sam:buyResponseContent>
+ </sam:buyResponse>
+ </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:dispatchConfig/>
+    </con:mockOperation>
+    <con:properties/>
+    <con:onRequestScript/>
+  </con:mockService>
+  <con:restMockService id="2a6dfe00-ebf7-44f2-8b96-64c69a5b5ed4" port="8084" path="/" host="localhost" name="RESTMockService">
+    <con:settings/>
+    <con:properties/>
+    <con:constraints>
+      <con:congestion>0</con:congestion>
+      <con:inputBandwidth>-1</con:inputBandwidth>
+      <con:outputBandwidth>-1</con:outputBandwidth>
+      <con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity>
+      <con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity>
+      <con:minApplicationDelay>0</con:minApplicationDelay>
+      <con:virtError>
+        <con:code>200</con:code>
+        <con:start>0</con:start>
+        <con:endless>true</con:endless>
+      </con:virtError>
+    </con:constraints>
+    <con:headerValidator type="NONE"/>
+    <con:restMockAction name="login" method="POST" resourcePath="/login" id="82d0d51b-1cc5-4a16-835e-f1da0547efbd">
+      <con:settings/>
+      <con:defaultResponse>OK Response</con:defaultResponse>
+      <con:dispatchStyle>SCRIPT</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchPath>def queryString = mockRequest.getRequest().getQueryString()
+
+                String[] fields = queryString.split("&amp;");
+                String[] kv;
+
+                // parse username and password from login request
+                HashMap&lt;String, String> params = new HashMap&lt;String, String>()
+                for (int i = 0; i &lt; fields.length; ++i){
+                kv = fields[i].split("=");
+                if (2 == kv.length)
+                params.put(kv[0], kv[1]);
+                }
+
+                def username = params.get("username")
+                def password = params.get("password")
+                def sum = username + password
+
+                // generate a session ID sequence
+                def sessionid = String.valueOf( Math.random() ).substring( 2 )
+
+                // set session in sum property to be references in response
+                context.setProperty( sum, sessionid )
+                context.setProperty( sessionid, sum )
+
+                requestContext.sessionid = sessionid
+
+                // set the response
+                return "Ok Response"</con:dispatchPath>
+      <con:dispatchXPath/>
+      <con:parameterDispatcherRuleContainer/>
+      <con:routeScript/>
+      <con:response name="OK Response" id="665a289b-2b31-4035-bd3f-19eeabb96c07" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+                    "sessionid" : "${sessionid}",
+                    "timestamp" :
+                    "${=import java.text.SimpleDateFormat ; new SimpleDateFormat('YYYY-MM-DD HH:mm:ss').format(new Date())}"
+                    }</con:responseContent>
+      </con:response>
+      <con:response name="Invalid Login Fault" id="b0ef5d4b-b9a2-41f6-8657-cfd3231988d2" httpResponseStatus="401" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{"Invalid Login" : "The login credentials are invalid&lt;/sam:loginFault" }</con:responseContent>
+      </con:response>
+      <con:response name="Already Logged In Fault" id="61773a8f-720a-4a1e-8125-21b2e5d896b9" httpResponseStatus="401" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{ "Already Logged In" : "The specified credentials are already logged in" }</con:responseContent>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="logout" method="GET" resourcePath="/logout" id="22685409-faf3-4411-8195-d31f6ef6c43e">
+      <con:settings/>
+      <con:defaultResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">OK Response</con:defaultResponse>
+      <con:dispatchStyle>SCRIPT</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchPath>def queryString = mockRequest.getRequest().getQueryString()
+
+                String[] fields = queryString.split("&amp;");
+                String[] kv;
+
+                HashMap&lt;String, String> params = new HashMap&lt;String, String>()
+                for (int i = 0; i &lt; fields.length; ++i){
+                kv = fields[i].split("=");
+                if (2 == kv.length)
+                params.put(kv[0], kv[1]);
+                }
+
+                def sessionid = params.get("sessionid")
+
+                // check
+                if( !context.hasProperty( sessionid ))
+                return "Invalid Session Id Fault"
+
+                // logout
+                context.removeProperty( context.getProperty( sessionid ))
+                context.removeProperty( sessionid )
+                requestContext.sessioninfo = "OK"
+
+                return "Ok Response"</con:dispatchPath>
+      <con:dispatchXPath/>
+      <con:parameterDispatcherRuleContainer/>
+      <con:routeScript/>
+      <con:response name="OK Response" id="d6bca629-1333-4827-9d08-678c7b1d2336" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{"Successfully logged out session" : "${sessioninfo}"}</con:responseContent>
+      </con:response>
+      <con:response name="Invalid Session Id Fault" id="d0c3a712-463c-4764-a120-dbb40b1c0a31" httpResponseStatus="404" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{"Failed" : "Invalid Session Id"}</con:responseContent>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="search" method="POST" resourcePath="/search" id="92956b11-db13-4f2a-90f3-f11bc6a1950b">
+      <con:settings/>
+      <con:defaultResponse>Search Response</con:defaultResponse>
+      <con:dispatchStyle>SCRIPT</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchPath>import java.net.URLDecoder;
+                def queryString = mockRequest.getRequest().getQueryString()
+
+                String[] fields = queryString.split("&amp;");
+                String[] kv;
+
+                HashMap&lt;String, String> params = new HashMap&lt;String, String>()
+                for (int i = 0; i &lt; fields.length; ++i){
+                kv = fields[i].split("=");
+                if (2 == kv.length)
+                params.put(kv[0], kv[1]);
+                }
+
+                def sessionid = params.get("sessionid")
+
+                // check
+                if( !context.hasProperty( sessionid ))
+                return "Invalid Session Id Fault"
+
+                def searchstring = URLDecoder.decode(params.get("searchstring"), "UTF-8")
+
+                if (searchstring == "all")
+                return "WildCard Response"
+                else if (searchstring == "Item 1")
+                return "Item 1 Response"
+                else if (searchstring == "Item 2")
+                return "Item 2 Response"
+                else if (searchstring == "Item 3")
+                return "Item 3 Response"
+                else if (searchstring == "Item 4")
+                return "Item 3 Response"
+                else if (searchstring == "Item 5")
+                return "Item 5 Response"
+                else
+                return "Unknown Response"
+
+
+                return "Search Response"</con:dispatchPath>
+      <con:dispatchXPath/>
+      <con:parameterDispatcherRuleContainer/>
+      <con:routeScript/>
+      <con:response name="Search Response" id="6b057754-1941-49f1-a76d-9ee9992751dc" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+                    "result": {
+                    "item": [
+                    {
+                    "id": "1",
+                    "description": "One handy protocol droid.",
+                    "price": "1"
+                    },
+                    {
+                    "id": "2",
+                    "description": "Item nr 2",
+                    "price": "2"
+                    },
+                    {
+                    "id": "3",
+                    "description": "Item nr 3",
+                    "price": "3"
+                    },
+                    {
+                    "id": "4",
+                    "description": "${item4description}",
+                    "price": "4"
+                    },
+                    {
+                    "id": "5",
+                    "description": "Item nr 5",
+                    "price": "5"
+                    }
+                    ]
+                    }
+                    }</con:responseContent>
+      </con:response>
+      <con:response name="Invalid Session Id Fault" id="7fb6a664-c1f0-4ce1-bb9b-f2cd50795807" httpResponseStatus="200" dataSource="">
+        <con:settings/>
+        <con:responseContent>{"Failed" : "Invalid Session Id"}</con:responseContent>
+      </con:response>
+      <con:response name="Item 1 Response" id="152e6860-a012-4719-9605-d0cabf2b5748" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+                    "result": {
+                    "item": {
+                    "id": "Item 1",
+                    "description": "One handy protocol droid. This droid is fluent in over six million forms of
+                    communication and has a lovely golden color. Built by an enthusiast. Mindwiped only once. Can be
+                    carried on your back.",
+                    "price": "1"
+                    }
+                    }
+                    }</con:responseContent>
+      </con:response>
+      <con:response name="Item 2 Response" id="82bf1b16-b4a1-4f8e-b047-28599cf0eecc" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+                    "result": {
+                    "item": {
+                    "id": "Item 2",
+                    "description": "Box of chocolate with several popular items. Covered in Glucose. Recommended safety
+                    distance when eating Spring Surprise, 10 feet.",
+                    "price": "1.99"
+                    }
+                    }
+                    }</con:responseContent>
+      </con:response>
+      <con:response name="Item 3 Response" id="b1658ff0-c644-4e58-bb77-15eb3525afea" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+                    "result": {
+                    "item": {
+                    "id": "Item 3",
+                    "description": "One towel. Massively useful thing. Impress the strags with this amazing cloth!",
+                    "price": "2.99"
+                    }
+                    }
+                    }</con:responseContent>
+      </con:response>
+      <con:response name="Item 4 Response" id="25edd970-aee2-49b7-9bff-0cb83050f88b" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+                    "result": {
+                    "item": {
+                    "id": "Item 4",
+                    "description": "Ono-Sendai 7. The newest cowboy tech from Hosaka. Break the ICE with this
+                    conversation piece.",
+                    "price": "4.99"
+                    }
+                    }
+                    }</con:responseContent>
+      </con:response>
+      <con:response name="Item 5 Response" id="fcb03d0a-5dcd-4332-85af-1adaa7c65577" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+                    "result": {
+                    "item": {
+                    "id": "Item 5",
+                    "description": "ReadyAPI. All your needs for API readiness",
+                    "price": "499"
+                    }
+                    }
+                    }</con:responseContent>
+      </con:response>
+      <con:response name="Search Fault Response" id="c1a03c18-c871-42fa-80c4-7e922e9dfc6a" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{"No Result" : "The search returned no items"}</con:responseContent>
+      </con:response>
+      <con:response name="Unknown Response" id="e73be179-0603-4d90-acd8-c5180438a39e" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{ "Client" : "Unknown Search String" }</con:responseContent>
+      </con:response>
+      <con:response name="WildCard Response" id="d2e440b4-f8b7-425c-a1ef-a4e2c51f0f78" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+                    "result": {
+                    "item": [
+                    {
+                    "id": "1",
+                    "description": "One handy protocol droid.",
+                    "price": "1"
+                    },
+                    {
+                    "id": "2",
+                    "description": "Item nr 2",
+                    "price": "2"
+                    },
+                    {
+                    "id": "3",
+                    "description": "Item nr 3",
+                    "price": "3"
+                    },
+                    {
+                    "id": "4",
+                    "description": "${item4description}",
+                    "price": "4"
+                    },
+                    {
+                    "id": "5",
+                    "description": "Item nr 5",
+                    "price": "5"
+                    }
+                    ]
+                    }
+                    }</con:responseContent>
+      </con:response>
+    </con:restMockAction>
+    <con:restMockAction name="buy" method="POST" resourcePath="/buy" id="ac8250b4-a453-4acb-ace2-9cb35ecec996">
+      <con:settings/>
+      <con:defaultResponse>Item 1 Response</con:defaultResponse>
+      <con:dispatchStyle>SCRIPT</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchPath>def queryString = mockRequest.getRequest().getQueryString()
+
+                String[] fields = queryString.split("&amp;");
+                String[] kv;
+
+                HashMap&lt;String, String> params = new HashMap&lt;String, String>()
+                for (int i = 0; i &lt; fields.length; ++i){
+                kv = fields[i].split("=");
+                if (2 == kv.length)
+                params.put(kv[0], kv[1]);
+                }
+
+                def buystring = URLDecoder.decode(params.get("buystring"), "UTF-8")
+
+                if (buystring == "all")
+                return "WildCard Response"
+                else if (buystring == "Item 1")
+                return "Item 1 Response"
+                else if (buystring == "Item 2")
+                return "Item 2 Response"
+                else if (buystring == "Item 3")
+                return "Item 3 Response"
+                else if (buystring == "Item 4")
+                return "Item 3 Response"
+                else if (buystring == "Item 5")
+                return "Item 5 Response"
+                else
+                return "Unknown Response"
+
+
+                return "Search Response"</con:dispatchPath>
+      <con:dispatchXPath/>
+      <con:parameterDispatcherRuleContainer/>
+      <con:routeScript/>
+      <con:response name="Item 1 Response" id="86927b66-ccd6-46a8-b11c-66f0aebf0791" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+                    "purchasestatus": {
+                    "id": "Item 1",
+                    "stockStatus": "1 unit",
+                    "expectedDelivery": "2000 years from now"
+                    }
+                    }</con:responseContent>
+      </con:response>
+      <con:response name="Item 2 Response" id="80ac35e6-c05c-4127-99ed-178e29eb280a" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+                    "purchasestatus": {
+                    "id": "Item 2",
+                    "stockStatus": "10 000 boxes",
+                    "expectedDelivery": "1 week"
+                    }
+                    }</con:responseContent>
+      </con:response>
+      <con:response name="Item 3 Response" id="134ed770-2fed-43f9-b60c-954f0f4c0817" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+                    "purchasestatus": {
+                    "id": "Item 3",
+                    "stockStatus": "4 towels",
+                    "expectedDelivery": "Any day now..."
+                    }
+                    }</con:responseContent>
+      </con:response>
+      <con:response name="Item 4 Response" id="f366eccd-b894-4f27-832d-6ed2559c3a2f" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+                    "purchasestatus": {
+                    "id": "Item 4",
+                    "stockStatus": "1 unit",
+                    "expectedDelivery": "In the near future."
+                    }
+                    }</con:responseContent>
+      </con:response>
+      <con:response name="Item 5 Response" id="2df5d21d-9c4b-46c9-949f-7377591617b1" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+                    "purchasestatus": {
+                    "id": "Item 5",
+                    "stockStatus": "1 license",
+                    "expectedDelivery": "You should already have it."
+                    }
+                    }</con:responseContent>
+      </con:response>
+      <con:response name="Invalid Session Id Fault" id="89b8d17c-a7d0-4cbb-b33b-b04a8f6d19a4" httpResponseStatus="401" dataSource="">
+        <con:settings/>
+        <con:responseContent>{ "Client" : "Invalid Session Id" }</con:responseContent>
+      </con:response>
+      <con:response name="Unknown Response" id="e2651072-ef11-4706-acfc-55e653d02958" httpResponseStatus="501" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent/>
+      </con:response>
+      <con:response name="WildCard Response" id="3698f1da-4882-4784-9c51-90827cb8f19a" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+                    "result": {
+                    "item": [
+                    {
+                    "id": "1",
+                    "description": "One handy protocol droid.",
+                    "price": "1"
+                    },
+                    {
+                    "id": "2",
+                    "description": "Item nr 2",
+                    "price": "2"
+                    },
+                    {
+                    "id": "3",
+                    "description": "Item nr 3",
+                    "price": "3"
+                    },
+                    {
+                    "id": "4",
+                    "description": "${item4description}",
+                    "price": "4"
+                    },
+                    {
+                    "id": "5",
+                    "description": "Item nr 5",
+                    "price": "5"
+                    }
+                    ]
+                    }
+                    }</con:responseContent>
+      </con:response>
+    </con:restMockAction>
+  </con:restMockService>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties>
+    <con:property>
+      <con:name>Some Property</con:name>
+      <con:value>with a value</con:value>
+    </con:property>
+  </con:properties>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates>
+      <con:name>SystemPropertiesReport</con:name>
+      <con:path>/home/robert/soapui/bin/reports/subreports/loadtest/LoadTestLog.jrxml</con:path>
+      <con:reportType>COMMON</con:reportType>
+      <con:reportLevel>SUBREPORT</con:reportLevel>
+      <con:nameInReport>LoadTestLog</con:nameInReport>
+      <con:data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><![CDATA[<jasperReport xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="535" pageHeight="842" columnWidth="535" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <template>"../../styles.jrtx"</template>
+ <field name="name" class="java.lang.String"/>
+ <field name="value" class="java.lang.String"/>
+ <columnHeader>
+ <band height="59">
+ <staticText>
+ <reportElement style="ColumnHeader" x="0" y="35" width="122" height="20"/>
+ <textElement textAlignment="Left" verticalAlignment="Middle"/>
+ <text>Name</text>
+ </staticText>
+ <staticText>
+ <reportElement style="ColumnHeader" x="133" y="35" width="40" height="20"/>
+ <textElement textAlignment="Left" verticalAlignment="Middle"/>
+ <text>Value</text>
+ </staticText>
+ <staticText>
+ <reportElement style="SmallHeader" x="0" y="0" width="535" height="34"/>
+ <textElement textAlignment="Left" verticalAlignment="Middle"/>
+ <text>System Properties</text>
+ </staticText>
+ </band>
+ </columnHeader>
+ <detail>
+ <band height="21">
+ <textField>
+ <reportElement x="0" y="1" width="122" height="20"/>
+ <textElement textAlignment="Left" verticalAlignment="Top"/>
+ <textFieldExpression class="java.lang.String">$F{name}</textFieldExpression>
+ </textField>
+ <textField>
+ <reportElement x="133" y="1" width="350" height="20"/>
+ <textElement textAlignment="Left" verticalAlignment="Top"/>
+ <textFieldExpression class="java.lang.String">$F{value}</textFieldExpression>
+ </textField>
+ </band>
+ </detail>
+</jasperReport>]]></con:data>
+      <con:description>NO DESC</con:description>
+      <con:scope>PROJECT</con:scope>
+      <con:dataSource xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    </con:reportTemplates>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+    <con:parameters/>
+  </con:reporting>
+  <con:reporting/>
+  <con:beforeRunScript>virtRunner.run("ServiceSoapBinding MockService")
+        virtRunner.run("RESTMockService")</con:beforeRunScript>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>log.info(request.getEndpoint())</con:script>
+  </con:eventHandlers>
+  <con:sensitiveInformation/>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
