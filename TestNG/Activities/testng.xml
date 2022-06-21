@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Suite">
+  <test thread-count="5" name="Test">
+	 <classes>
+		<class name="TestNG_Practise.Activity1">
+			<methods>
+				<include name="exampleTestCase" />
+			</methods>
+		</class>
+		<class name="TestNG_Practise.Activity2">
+			<methods>
+				<include name="testCase1" />
+				<include name="testCase2" />
+				<include name="testCase3" />
+				<include name="testCase4" />
+			</methods>
+		</class>
+		<class name="TestNG_Practise.Activity3">
+			<methods>
+				<include name="loginTest" />
+
+			</methods>
+		</class>
+	</classes>
+	<groups>
+		<run>
+			<include name="HeaderTests" />
+			<!--<exclude name="HeaderTests" /> -->
+		</run>
+	</groups>
+	<classes>
+		<class name="TestNG_Practise_SuiteExample.Activity4_DemoOne" />
+		<class name="TestNG_Practise_SuiteExample.Activity4_DemoTwo" />
+		<class name="TestNG_Practise_SuiteExample.Activity4_DemoTwo" />
+		<class name="Activity4_DemoTwo.Activity5" />
+	</classes>
+
+	<parameter name="sUsername" value="testuser" />
+	<parameter name="sPassword" value="Test@123" />
+	<classes>
+		<class name="TestNG_Practise_TestNG_Parameters.TestScript" />
+	</classes>
+
+	<parameter name="username" value="admin" />
+	<parameter name="password" value="password" />
+	<classes>
+		<class name="TestNG_Practise_DataProvider.Activity6" />
+	</classes>
+	
+	 <classes>
+            <class name="TestNG_Practise_DataProvider.Activity7"/>
+        </classes>
+        
+     <classes>
+            <class name="TestNG_Practise.Activity1"/>
+            <class name="TestNG_Practise.Activity2"/>
+            <class name="TestNG_Practise.Activity3"/>
+            <class name="TestNG_Practise.Activity5"/>
+        
+        </classes>
+        
+      <classes>
+			<class name="TestNG_Practise_Logging.Activity9"/>
+		</classes>
+</test> <!-- Test -->
+</suite> <!-- Suite -->
