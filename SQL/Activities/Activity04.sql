@@ -1,0 +1,15 @@
+REM   Script: Activity04
+REM   My SQL Activity04
+
+
+SELECT * FROM SALESMAN;
+
+ALTER TABLE SALESMAN ADD grade int;
+
+desc salesman
+
+
+UPDATE SALESMAN SET grade=100;
+
+SELECT * FROM SALESMAN;
+
