@@ -4,6 +4,8 @@
 1. Please fork this repo and follow the proper directory structure while submitting your activities.
 2. File names need to follow this format: `Activity#` where `#` is the activity number.
 
+[![Java CI with Maven](https://github.com/Venkataramireddymareddy/FST-M1/actions/workflows/maven.yml/badge.svg?branch=main)](https://github.com/Venkataramireddymareddy/FST-M1/actions/workflows/maven.yml)
+
 ## Directory Structure
 ```
 .
