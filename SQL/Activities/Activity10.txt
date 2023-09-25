@@ -1,0 +1,7 @@
+select * from orderswhere salesman_id=(select distinct salesman_id FROM orders WHERE customer_id=3007);
+
+select * from orders where salesman_id IN (select salesman_id FROM salesman WHERE city='New York');
+
+select grade, count(*) from customers group by grade having grade>(select AVG(grade) FROM customers WHERE city='New York');
+
+select/ order_no, purchase_amount, order_date, salesman_id FROM orders where salesman_id IN( SELECT salesman_id FROM salesman where commission=( SELECT MAX(commission) FROM salesman));
