@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class activity1 {
+public class Activity1 {
     // Driver Declaration
     AndroidDriver driver;
 
@@ -23,7 +23,7 @@ public class activity1 {
         UiAutomator2Options options = new UiAutomator2Options();
         options.setPlatformName("android");
         options.setAutomationName("UiAutomator2");
-        options.setAppPackage("com.oneplus.calculator");
+        options.setAppPackage("com.android.calculator2");
         options.setAppActivity(".Calculator");
         options.noReset();
 
@@ -36,16 +36,16 @@ public class activity1 {
     @Test
     public void multiplyTest() {
         // Perform the calculation
-        driver.findElement(AppiumBy.id("digit_5")).click();
+        driver.findElement(AppiumBy.id("digit_6")).click();
         driver.findElement(AppiumBy.accessibilityId("multiply")).click();
-        driver.findElement(AppiumBy.id("digit_8")).click();
+        driver.findElement(AppiumBy.id("digit_9")).click();
         driver.findElement(AppiumBy.accessibilityId("equals")).click();
 
         // Find the result
         String result = driver.findElement(AppiumBy.id("result")).getText();
 
         // Assertion
-        Assert.assertEquals(result, "40");
+        Assert.assertEquals(result, "54");
     }
 
 
@@ -56,3 +56,4 @@ public class activity1 {
         driver.quit();
     }
 }
+
