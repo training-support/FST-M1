@@ -1,0 +1,5 @@
+name= input("Please Enter your Name?")
+age= int(input("How old are you?"))
+year= (2023-age) +100
+
+print (f"{name} will be 100 on the year {year}")
