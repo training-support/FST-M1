@@ -11,7 +11,7 @@ public class Activity12 {
         Addable ad1 = Integer::sum;
 
         Addable ad2 = (num1, num2) -> 
-        //here -> operator is the bridge connecting num1 and num2 to add.
+        
         {
             int sum = num1 + num2;
             System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sum);
