@@ -10,13 +10,14 @@ public class Activity12 {
 
         Addable ad1 = Integer::sum;
 
-        Addable ad2 = (num1, num2) -> {
+        Addable ad2 = (num1, num2) -> 
+        //here -> operator is the bridge connecting num1 and num2 to add.
+        {
             int sum = num1 + num2;
             System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sum);
             return sum;
         };
 
-        // Use the lambda expressions
         int result1 = ad1.add(10, 20);
         System.out.println("Result from ad1: " + result1);
 
