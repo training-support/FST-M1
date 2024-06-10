@@ -22,5 +22,5 @@ public class Bicycle {
     //Method to print info of Bicycle
     public String bicycleDesc() {
         return("No of gears are "+ gears + "\nSpeed of bicycle is " + currentSpeed);
-    }
+    }	
 }
