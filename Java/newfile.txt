@@ -1,0 +1,4 @@
+//Get file from new directory
+File newFile = FileUtils.getFile(destDir, "newfile.txt");
+//Read data from file
+String newFileData = FileUtils.readFileToString(newFile, "UTF8");
