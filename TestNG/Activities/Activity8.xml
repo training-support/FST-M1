@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<suite parallel="false" name="OrderMax test Automation Suite">
+	  <listeners>
+	<listener
+		class-name = "com.om.qa.ExtentReportListener.ExtentReportNG"/>
+	</listeners>
+		
+	<test name="OM Test cases">
+	    <classes>
+	   			<class name="com.om.qa.testcases.Activity1"/>
+	            <class name="com.om.qa.testcases.Activity2"/>
+	            <class name="com.om.qa.testcases.Activity3"/>
+	            <class name="com.om.qa.testcases.Activity4"/>
+	            <class name="com.om.qa.testcases.Activity5"/>
+	            <class name="com.om.qa.testcases.Activity6"/>
+	    </classes>
+	  </test> <!-- Test -->  
+	</suite> <!-- Suite -->
+
+
