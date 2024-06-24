@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite parallel="false" name="Suite">
+    <test name="Test">
+        <groups>
+            <run>
+                <include name="HeaderTests" />
+                <!--<exclude name="HeaderTests" />-->
+            </run>
+        </groups>
+        <classes>
+            <class name="activities.Activity5.Activity5"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
