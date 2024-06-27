@@ -16,9 +16,9 @@
 |---| -------- | ------------------ |
 | 1  | To implement object, class, constructor, variables and methods creation | .java file |
 | 2	 | Create and intialise an array. Use approriate loops and control statements. | .java file |
-| 3  | Requires understanding on which data type to use for given task |.java file|
+| 3  | Interplanetary age calculator |.java file|
 | 4  | Implement Insertion sort | .java file |
-| 5  | Implement Abstraction through abstarct class | .java file |
+| 5  | Implement Abstraction through abstract class | .java file |
 | 6  | Implement Encapsulation | .java file |
 | 7  | Hybrid Inheritance(Multiple and Simple) implemenation | .java file |
 | 8  | Create custom excpetion handler | .java file |
