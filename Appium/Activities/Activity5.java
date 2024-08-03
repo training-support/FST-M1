@@ -1,5 +1,4 @@
-package Examples;
-
+package activities;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
@@ -16,10 +15,7 @@ import java.time.Duration;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 
-
-
-public class Activity5
-{
+public class Activity5 {
     // Driver Declaration
     AndroidDriver driver;
     WebDriverWait wait;
@@ -45,36 +41,30 @@ public class Activity5
 
     // Test method
     @Test
-    public void smsTest() throws InterruptedException {
+    public void smsTest() {
         // Find and click the add button
-        driver.findElement(AppiumBy.accessibilityId("Messages")).click();
+        driver.findElement(AppiumBy.accessibilityId("Start new conversation")).click();
 
         // Wait for elements to load
-        Thread.sleep(15);
-        //wait.until(ExpectedConditions.elementToBeClickable(
-          //      AppiumBy.id("(//android.widget.ImageView[@resource-id=\"com.google.android.apps.messaging:id/conversation_icon\"])[1]")
-            //    ));
+        wait.until(ExpectedConditions.elementToBeClickable(
+                AppiumBy.id("recipient_text_view")
+        ));
 
-        Thread.sleep(15);
         // Find the element to add recipient
-        //driver.findElement(AppiumBy.id("com.google.android.apps.messaging:id/zero_state_search_box_auto_complete")).sendKeys("9986607406");
-        //driver.findElement(AppiumBy.id("com.google.android.apps.messaging:id/contact_icon")).click();
+        driver.findElement(AppiumBy.id("recipient_text_view")).sendKeys("18282832912");
         // Press ENTER
-        //driver.pressKey(new KeyEvent().withKey(AndroidKey.ENTER));
+        driver.pressKey(new KeyEvent(AndroidKey.ENTER));
 
         // Wait for textbox to appear
-        wait.until(ExpectedConditions.elementToBeClickable(AppiumBy.id("com.google.android.apps.messaging:id/compose_message_text")));
+        wait.until(ExpectedConditions.elementToBeClickable(AppiumBy.id("compose_message_text")));
 
         // Enter text to send
-        Thread.sleep(13);
-        driver.findElement(AppiumBy.id("com.google.android.apps.messaging:id/compose_message_text")).sendKeys("Hello from Appium");
+        driver.findElement(AppiumBy.id("compose_message_text")).sendKeys("Hello from Appium");
         // Press Send
-        //Thread.sleep(15);
-        driver.findElement(AppiumBy.id("com.google.android.apps.messaging:id/send_message_button_icon")).click();
-
+        driver.findElement(AppiumBy.accessibilityId("Send SMS")).click();
 
         // Assertion
-        String messageTextSent = driver.findElement(AppiumBy.id("com.google.android.apps.messaging:id/message_text")).getText();
+        String messageTextSent = driver.findElement(AppiumBy.id("message_text")).getText();
         Assert.assertEquals(messageTextSent, "Hello from Appium");
     }
 
