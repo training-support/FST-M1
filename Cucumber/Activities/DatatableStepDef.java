@@ -1,25 +1,20 @@
-public class LoginTestSteps {
+public class DatatableStepDef {
 WebDriver driver;
 WebDriverWait wait;
 
-@Given("^User is on Login page$")
-public void loginPage() {
-    //Setup instances
-    driver = new FirefoxDriver();
-    wait = new WebDriverWait(driver, 10);
-    
-    //Open browser
-    driver.get("https://v1.training-support.net/selenium/login-form");
+@Given("User is completes the requirement")
+public void completereq() {
+    System.out.println("Given activity completed");
 }
 
-@When("^User enters {string} and {string}$")
-public void user_enters_and(String username, String password) throws Throwable {
-    //Enter username from Feature file
-    driver.findElement(By.id("username")).sendKeys(username);
-    //Enter password from Feature file
-    driver.findElement(By.id("password")).sendKeys(password);
-    //Click Login
-    driver.findElement(By.xpath("//button[@type='submit']")).click();
+@When("^User enters following username and password")
+public void user_enters_and(DataTable credemtials) {
+    List<List<String>> creds = credentials.asLists();
+    for(List<String> cred : creds){
+        for(String credential : cred){
+            System.out.println(credential);
+        }
+    }
+   
 }
 
-}
