@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="ExampleSuite" >
+    <test name="SuiteTests" >
+        <groups>
+            <run>
+                <include name="HeaderTests" />
+                <!--<exclude name="HeaderTests" />-->
+            </run>
+        </groups>
+        <classes>
+            <class name="activities.DemoOne"/>
+            <class name="activities.DemoTwo"/>
+        </classes>
+    </test>
+</suite>
