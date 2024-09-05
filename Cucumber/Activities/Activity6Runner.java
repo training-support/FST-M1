@@ -5,11 +5,12 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/Features",
-        glue = {"stepDefinitions"},
-        tags = "@activity1",
-        plugin = {"html: test-reports"},
-        monochrome = true
+    features = "Features",
+    glue = {"stepDefinitions"},
+    tags = "@SimpleAlert",
+    plugin = {"pretty"},
+    monochrome = true
 )
-public class Activity6Runner {
+
+public class ActivitiesRunner {
 }
