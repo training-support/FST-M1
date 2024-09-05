@@ -30,7 +30,7 @@ public class SpecificationTest {
         //response specification
         responseSpec = new ResponseSpecBuilder().
                 expectStatusCode(200).
-                expectBody("status",equalTo("Wagh")).
+                expectBody("status",equalTo("alive")).
                 expectResponseTime(lessThanOrEqualTo(3000L)).
                 build();
     }
@@ -39,12 +39,12 @@ public class SpecificationTest {
     public void postRequest(){
         Map<String, Object>  reqBody = new HashMap<>();
         reqBody.put("id", 78372);
-        reqBody.put("name","Komal");
-        reqBody.put("status", "Wagh");
+        reqBody.put("name","Rijen");
+        reqBody.put("status", "alive");
         //Send Request, save response
         Response response = given().spec(requestSpec).body(reqBody).log().all().when().post();
         petId = response.then().extract().path("id");
-        response.then().spec(responseSpec).body("name",equalTo("Komal"));
+        response.then().spec(responseSpec).body("name",equalTo("Rijen"));
 
     }
 
