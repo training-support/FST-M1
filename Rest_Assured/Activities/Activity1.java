@@ -36,7 +36,7 @@ public class Activity1 {
     public void getPetInfo() {
         Response response =
                 given().contentType(ContentType.JSON) // Set headers
-                        .when().pathParam("petId", "77232") // Set path parameter
+                        .when().pathParam("petId", "7723332") // Set path parameter
                         .get(ROOT_URI + "/{petId}"); // Send GET request
 
         // Assertion
