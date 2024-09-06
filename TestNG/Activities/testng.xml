@@ -3,12 +3,12 @@
 <suite name="TestSuite" parallel="classes">
     <test name="Tests">
         <classes>
-            <class name="session9.Activity1"/>
-            <class name="session9.Activity2"/>
-            <class name="session9.Activity3"/>
-            <class name="session9.Activity4"/>
-            <class name="session9.Activity5"/>
-            <class name="session9.Activity6"/>
+            <class name="activities.Activity1"/>
+            <class name="activities.Activity2"/>
+            <class name="activities.Activity3"/>
+            <class name="activities.Activity4"/>
+            <class name="activities.Activity5"/>
+            <class name="activities.Activity6"/>
         </classes>
     </test>
 </suite>
