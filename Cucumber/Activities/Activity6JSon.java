@@ -8,9 +8,8 @@ import io.cucumber.junit.CucumberOptions;
     features = "Features",
     glue = {"stepDefinitions"},
     tags = "@SimpleAlert",
-    plugin = {"pretty"},
+    plugin = {"json: test-reports/json-report.json"},
     monochrome = true
 )
 
-public class ActivitiesRunner {
-}
+public class ActivitiesRunner {}
