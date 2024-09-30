@@ -19,7 +19,7 @@ jobs:
         with:
           github-token: ${{ secrets.ORG_TOKEN }}
           script: |
-            const org = 'your-org-name'; // Replace with your organization name
+            const org = 'Training Support'; // Replace with your organization name
             const username = context.payload.pull_request.user.login;
 
             // Check if the PR author is a member of the org
