@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" thread-count="4" parallel="classes">
+   <!-- <groups>  Groups Control 
+        <run>
+            <include name="HeaderTests" />
+        </run>
+    </groups>-->
+    <parameter name="username" value="admin" />
+    <parameter name="password" value="password" />
+  <test name="Test">
+    <classes>
+   <!----> 	<class name="activities.Activity1"/>
+    	<class name="activities.Activity2"/>
+    	<class name="activities.Activity3"/>
+        <class name="activities.Activity4"/>
+        <class name="activities.Activity4a"/>
+        <class name="activities.Activity5"/>
+        <class name="activities.Activity6"/>
+      <class name="activities.Activity7"/>
+      <class name="activities.Activity9"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
