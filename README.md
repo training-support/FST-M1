@@ -29,14 +29,6 @@
 | 13 | Accept number inputs from console using Scanner class and store them in an array; use random class to generate an index value and print the value at generated index	| .java file |
 | 14 | Use FileUtils to perform file I/O operations | .java file |
 
-### Junit
-
-| # | Activity | Expected to Upload |
-|---| -------- | ------------------ |
-| 1 | Test ArrayList with elements | .java file |
-| 2 | Write JUnit tests to test exceptions | .java file |
-| 3 | Demonstration of all JUnit annotations | .java file |
-
 ### Python
 
 | # | Activity | Expected to Upload |
@@ -215,15 +207,3 @@
 | # | Activity | Expected to Upload |
 |---| -------- | ------------------ |
 | 1 | Learn the git commands to push and pull files in repositories | Screenshot of the output of a git clone command |
-
-### Jira
-
-| # | Activity | Expected to Upload |
-|---| -------- | ------------------ |
-| 1 | How Jira is used in a Scrum project | Screenshot of the scrum board |
-
-### Jenkins
-
-| # | Activity | Expected to Upload |
-|---| -------- | ------------------ |
-| 1 | Configuring Jenkins jobs and pipelines | Screenshots of a freestyle project and pipeline project |
