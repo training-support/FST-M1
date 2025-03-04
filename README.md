@@ -2,7 +2,7 @@
 
 ## Instructions
 
-1. Please fork this repo and follow the proper directory structure while submitting your activities.
+1. Please fork this repo(main branch only) and follow the proper directory structure while submitting your activities.
 2. File names need to follow this format: `Activity#` where `#` is the activity number.
 
 > [!CAUTION]
@@ -37,26 +37,22 @@
 | 2 | Use operators and control flow statements | .py file |
 | 3 | Use conditional statements to create a simple game | .py file |
 | 4 | Improvise activity 3 and give user option to play again | .py file |
-| 5 | Use loops to create multiplication table | .py file |
-| 6 | Generate a pattern using loops | .py file |
-| 7 | List Sum Calculator | .py file |
-| 8 | List Checker | .py file |
-| 9 | Combining Lists | .py file |
-| 10 | Tuple Number Checker | .py file |
-| 11 | Dictionary of Fruit Shops | .py file |
-| 12 | Recursive Adder | .py file |
-| 13 | Adding List numbers | .py file |
-| 14 | Using recursion, generate Fibonacci numbers | .py file |
-| 15 | Handling Errors in Python | .py file |
-| 16 | Class and class objection creation | .py file |
-| 17 | Using Pandas, write CSV files | .py file |
-| 18 | Using Pandas, read CSV files | .py file |
-| 19 | Using Pandas, write excel files | .py file |
-| 20 | Using Pandas, read excel file | .py file |
-| 21 | Calculator Test | .py file |
-| 22 | Grouping tests | .py file |
-| 23 | Implement Fixtures | .py file |
-| 24 | Implement Parameterization | .py file |
+| 5 | Generate a pattern using loops | .py file |
+| 6 | List Sum Calculator | .py file |
+| 7 | List Checker | .py file |
+| 8 | Tuple Number Checker | .py file |
+| 9 | Dictionary of Fruit Shops | .py file |
+| 10 | Using recursion, generate Fibonacci numbers | .py file |
+| 11 | Handling Errors in Python | .py file |
+| 12 | Class and class objection creation | .py file |
+| 13 | Using Pandas, write CSV files | .py file |
+| 14 | Using Pandas, read CSV files | .py file |
+| 15 | Using Pandas, write excel files | .py file |
+| 16 | Using Pandas, read excel file | .py file |
+| 17 | Calculator Test | .py file |
+| 18 | Grouping tests | .py file |
+| 19 | Implement Fixtures | .py file |
+| 20 | Implement Parameterization | .py file |
 
 ### SQL
 
@@ -81,40 +77,29 @@
 | 1 | Clicking a link | .java, .py files |
 | 2 | Sending Input | .java, .py files |
 | 3 | Using Xpaths | .java, .py files |
-| 4 | Practice to locate and print data onto console | .java, .py files |
-| 5 | Input Events #1 | .java, .py files |
-| 6 | Input Events #2 | .java, .py files |
-| 7 | Drag and Drop | .java, .py files |
-| 8 | Waits #1 | .java, .py files |
-| 9 | Waits #2 | .java, .py files |
-| 10 | Check if elements are displayed | .java, .py files |
-| 11 | Check if elements are selected | .java, .py files |
-| 12 | Check if elements are enabled | .java, .py files |
-| 13 | Tables #1 | .java, .py files |
-| 14 | Tables #2 | .java, .py files |
-| 15 | Dynamic Attirbutes #1 | .java, .py files |
-| 16 | Dynamic Attributes #2 | .java, .py files |
-| 17 | Selects #1 | .java, .py files |
-| 18 | Selects #2 | .java, .py files |
-| 19 | Alerts #1 | .java, .py files |
-| 20 | Alerts #2 | .java, .py files |
-| 21 | Multiple tabs | .java, .py files |
-| 22 | Popups | .java, .py files |
+| 4 | Input Events #1 | .java, .py files |
+| 5 | Drag and Drop | .java, .py files |
+| 6 | Waits #2 | .java, .py files |
+| 7 | Tables #2 | .java, .py files |
+| 8 | Dynamic Attributes #2 | .java, .py files |
+| 9 | Selects #1 | .java, .py files |
+| 10 | Alerts #1 | .java, .py files |
+| 11 | Multiple tabs | .java, .py files |
 
 ### TestNG
 
 | # | Activity | Expected to Upload |
 |---| -------- | ------------------ |
-| 1 | To setup the firefox driver, create a new instance for firefox driver.Open the browser and check title of page, print title of page.Assertion for page tile, findthe clickable link on the page and click it. Print title of new page. | .java file |
+| 1 | To setup the firefox driver, create a new instance for firefox driver.Open the browser and check title of page, print title of page.Assertion for page tile, find the clickable link on the page and click it. Print title of new page. | .java file |
 | 2 | To setup the firefox driver, create a new instance for firefox driver.Open the browser and add four test methods, close the browser | .java file |
 | 3 | To find the Username and password fields, enter the credentials.Click login and read login message | .java file |
-| 4 | To use testng.xml to execute multiple classes | .java file, .xml file |
+| 4 | To use testng.xml to execute multiple classes | .java files, .xml file |
 | 5 | To write tests for checking the page title,implement header testsandbutton tests. | .java file, .xml file |
 | 6 | To open the browser,find username and password fields and enter details. Click login,assert message and close the driver. | .java file |
 | 7 | To return two objects with a username and a password, by using the @DataProviders method. Credentials() with the name parameter set to "Authentication." and  return type of the method to Object[][]. | .java file, .xml file |
-| 8 | To run activities in parallel. | .java file, .xml file |
-| 9 | To click the button to open a simple alert,switch to alert window and gettext in alert box and print it | .java file |
-| 10 | To read the file as a stream. Create the workbook. Get the first sheet from that workbook. Iterate through all the rows one by one. Iterate over all the cells one by one. Clear the fields. Enter the data. Click on the submit button. Wait for the alert to show up. Switch to Alert Get the alert message. Refresh the page. | .java file |
+| 8 | To run activities in parallel. | .xml file |
+| 9 | To click the button to open a simple alert, switch to the alert window and get the text in alert box and print it | .java file |
+| 10 | To read the file as a stream. Create a workbook. Get the first sheet from that workbook. Iterate through all the rows one by one. Iterate over all the cells one by one. Clear the fields. Enter the data. Click on the submit button. Wait for the alert to show up. Switch to Alert Get the alert message. Refresh the page. | .java file |
 
 ### Cucumber
 
@@ -126,21 +111,21 @@
 | 4 | Data driven test without example | .feature file, .java files |
 | 5 | Data driven test with example | .feature file, .java files |
 | 6 | Data driven test with DataTable | .feature file, .java files |
-| 7 | Using plugin and monochrome options in Ccumber tests | .feature file, .java files |
+| 7 | Using plugin options in Cucumber tests | .feature file, .java files |
 
 ### Selenium Project
 
 | # | Activity | Expected to Upload |
 |---| -------- | ------------------ |
-| 1 | Activity varies based on assigned project | .java file |
-| 2 | Activity varies based on assigned project | .java file |
-| 3 | Activity varies based on assigned project | .java file |
-| 4 | Activity varies based on assigned project | .java file |
-| 5 | Activity varies based on assigned project | .java file |
-| 6 | Activity varies based on assigned project | .java file |
-| 7 | Activity varies based on assigned project | .java file |
-| 8 | Activity varies based on assigned project | .java file |
-| 9 | Activity varies based on assigned project | .java file |
+| 1 | Project Activity | .java file |
+| 2 | Project Activity | .java file |
+| 3 | Project Activity | .java file |
+| 4 | Project Activity | .java file |
+| 5 | Project Activity | .java file |
+| 6 | Project Activity | .java file |
+| 7 | Project Activity | .java file |
+| 8 | Project Activity | .java file |
+| 9 | Project Activity | .java file |
 
 
 ### API Testing (ReadyAPI)
@@ -177,7 +162,6 @@
 | # | Activity | Expected to Upload |
 |---| -------- | ------------------ |
 | 1 | Github Project | .java file |
-| 2 | Pact Contract Testing Project | .java file |
 
 ### Appium
 
